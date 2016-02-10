@@ -11,4 +11,4 @@ sum =(nums...) ->
 a = "Hello"
 times = (a,b) -> a*b
 console.log(sum(2,4,5))
-alert(inspect(a))
+inspect a
