@@ -4,7 +4,7 @@
 	"mappings": [
 		// {
 		 	"src": "build/javascript",
-		// 	"dest": "build/css"
+		 	"dest": "build/css"
 		// }
 	],
 
