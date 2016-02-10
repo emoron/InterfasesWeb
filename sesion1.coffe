@@ -3,6 +3,11 @@ miVariable = "hola"
 
 square = (x) -> x * x
 
+func = ->
+ #Extra
+ "bar"
 
 times = (a,b) -> a*b
 console.log(times(15,34))
+
+console.log(func)
