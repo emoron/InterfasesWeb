@@ -3,11 +3,10 @@ miVariable = "hola"
 
 square = (x) -> x * x
 
-func = ->
- #Extra
- "bar"
+sum =(nums...) ->
+  result = 0
+  nums.forEach (n) -> result += n
+  result
 
 times = (a,b) -> a*b
-console.log(times(15,34))
-
-console.log(func)
+console.log(sum(2,4,5))
