@@ -2,6 +2,7 @@
 miVariable = "hola"
 
 square = (x) -> x * x
-console.log(10)
+
 
 times = (a,b) -> a*b
+times(15,34)
