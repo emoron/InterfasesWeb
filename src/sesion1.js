@@ -8,6 +8,8 @@ opposite = true
 // Functions:
 
 square = (x) -> x * x
+cube = (x) -> square(x) * x
+cube(10)
 
 // Arrays:
 list = [1, 2, 3, 4, 5]
