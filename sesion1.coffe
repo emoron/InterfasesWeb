@@ -8,6 +8,7 @@ sum =(nums...) ->
   nums.forEach (n) -> result += n
   result
 
+a = "Hello"
 times = (a,b) -> a*b
 console.log(sum(2,4,5))
-alert(a)
+alert(inspect(a))
