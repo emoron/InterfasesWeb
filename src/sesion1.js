@@ -1,3 +1,3 @@
 
-square = (x) - > x*x
+square = (x) -> x*x
 console.log(number)
