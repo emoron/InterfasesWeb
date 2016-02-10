@@ -14,4 +14,3 @@ console.log(sum(2,4,5))
 
 for name in ["Roger","Aldo","Manuel"]
   console.log name
-  
