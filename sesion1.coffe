@@ -11,4 +11,6 @@ sum =(nums...) ->
 a = "Hello"
 times = (a,b) -> a*b
 console.log(sum(2,4,5))
-inspect a
+
+for name in ["Roger","Aldo","Manuel"]
+  console.log name
