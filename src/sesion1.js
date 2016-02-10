@@ -1,5 +1,3 @@
 
-number   = 42
-opposite = true
-
+square = (x) - > x*x
 console.log(number)
