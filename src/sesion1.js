@@ -1,4 +1,4 @@
-// Assignment:
+
 number   = 42
 opposite = true
 square = (x) -> x * x
