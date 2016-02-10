@@ -10,3 +10,4 @@ sum =(nums...) ->
 
 times = (a,b) -> a*b
 console.log(sum(2,4,5))
+alert(a)
