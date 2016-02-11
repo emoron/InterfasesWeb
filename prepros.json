@@ -54,7 +54,7 @@
     "liveRefresh": true,
     "liveRefreshDelay": 0,
     "filterPatterns": "",
-    "useCustomServer": false,
+    "useCustomServer": true,
     "customServerUrl": "",
     "cssPath": "css/",
     "jsPath": "js/",
