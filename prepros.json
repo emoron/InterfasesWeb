@@ -21,7 +21,7 @@
       "pid": "8edef172",
       "name": "sesion1.coffee",
       "input": "sesion1.coffee",
-      "customOutput": false,
+      "customOutput": "lib/Untitled.js",
       "type": "Coffee",
       "config": {
         "autoCompile": true,
