@@ -8,7 +8,7 @@
       "pid": "8edef172",
       "name": "README.md",
       "input": "README.md",
-      "customOutput": false,
+      "customOutput": "lib/Untitled.html",
       "type": "Md",
       "config": {
         "autoCompile": true,
