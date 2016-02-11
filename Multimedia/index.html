@@ -107,9 +107,73 @@ ffmpeg -ss 00:00:30 -i orginalfile -t 00:00:05 -vcodec copy -acodec copy newfile
 <h1>Enconde perserve quality</h1>
 <pre><code>ffmpeg  -i input.flv -ar 22050 salida.mp4
 </code></pre>
+<div id="bitrate-encode-mp4" class="section level2">
+<h2>Bitrate Encode mp4</h2>
+<p>When choosing between the MP4, MOV, FLV, WMV and AVI containers, MP4 is the best option. The complexity of the MOV container can cause devices to stall when playing video. The FLV container is only supported by the Flash plugin, which is not supported by the new HTML5 standard and Apple mobile devices such as the iPhone. The WMV container requires specialized plugins and is generally only supported by Microsoft products such the Zune, or Silverlight.</p>
+<p>The MP4 container is almost universally supported: Apple, Microsoft, Flash, and HTML5 all offer support for MP4 (there are some outliers). On top of that MP4 can use the H.264 video codec and the AAC audio codec, compatibility wise they are the best choices for compressing your video. H.264 video is supported by just about any player, browser, plugin and device available. It also offers one of the best algorithms for compressing your video on top of being freely available.</p>
+<p><code>File size = bitrate (kilobits per second) x duration</code> Bitrate is a measurement of the number of bits that are transmitted over a set length of time. Your overall bitrate is a combination of your video stream and audio stream in your file with the majority coming from your video stream.</p>
+<div id="resolution" class="section level3">
+<h3>Resolution</h3>
+<p>The easiest change can come from lowering the number of pixels displayed by simply lowering the resolution of the file. If you are playing your video in a 320 x 240 player on your website and you do not expect the end user to enlarge the video.</p>
 </div>
-<div id="bitrate-encode-mp4" class="section level1">
-<h1>Bitrate Encode mp4</h1>
+<div id="frame-rate" class="section level3">
+<h3>Frame Rate</h3>
+<p>The frame rate is how many unique consecutive images are displayed per second in the video to give the illusion of movement. The human visual system does not see in terms of frames; it works with a continuous flow of light information. Basically this means that the rate at which a video has the appearance of judder (non-smooth motion) is different based on a person to person basis along with the colors (or color of light or actions) in the video.</p>
+</div>
+<div id="quality-versus-streaming" class="section level3">
+<h3>Quality versus Streaming</h3>
+<p>If you are not sure what your target connection speed is and you are not shooting to stream your videos, but do not want an abundant amount of bandwidth cost from Amazon, one method that works really well in determining a good bitrate is the Kush Gauge. To find a decent bitrate simply multiply the target pixel count by the frame rate; then multiply the result by a factor of 1, 2 or 4, depending on the amount of motion in the video; and then multiply that result by 0.07 to get the bit rate in bps. Divide your result by 1,000 to get a kbps estimate or by 1,000,000 to get a Mbps estimate.</p>
+<p>Kush gauge: pixel count x motion factor x 0.07 ÷ 1000 = bit rate in kbps (frame width x height = pixel count) and motion factor is 1,2 or 4 Screencast example For example if your video is a low motion 5fps screen cast in a 1280 x 720 frame size you would have a formula like this:</p>
+<p>1280 x 720 = 921,600 pixel count 5 frames per second 1 = Low Motion</p>
+<p>(921,600 x 5) x 1 x 0.07 = 322,560 bps / 1000 = 322 kbps bitrate</p>
+<p>High action video example Another example on the other side of the spectrum would be a 24 fps high action shot of an action scene with multiple quick cuts in a 1920 x 1080 frame size:</p>
+<p>1920 x 1080 = 2,073,600 pixel count 24 frames per second 4 = High Motion</p>
+<p>(2,073,600 x 24) x 4 x 0.07 = 13,934,592 bps / 1000 = 13,934 kbps bitrate</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Starting Points</li>
+</ol>
+<p>If you are completely lost right now and having trouble deciding what your video bitrate should be here are some starting points for you to experiment with for a streaming connection:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Output size</th>
+<th align="left">Bitrate</th>
+<th align="left">Filesize</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">320x240 pixels</td>
+<td align="left">400 kbps</td>
+<td align="left">3MB / minute</td>
+</tr>
+<tr class="even">
+<td align="left">480x270 pixels</td>
+<td align="left">700 kbps</td>
+<td align="left">5MB / minute</td>
+</tr>
+<tr class="odd">
+<td align="left">1024 x 576 pixels</td>
+<td align="left">1500 kbps</td>
+<td align="left">11MB / minute</td>
+</tr>
+<tr class="even">
+<td align="left">1280x720 pixels</td>
+<td align="left">2500 kbps</td>
+<td align="left">19MB / minute</td>
+</tr>
+<tr class="odd">
+<td align="left">1920x1080 pixels</td>
+<td align="left">4000 kbps</td>
+<td align="left">30MB / minute</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="referencias" class="section level1">
+<h1>Referencias</h1>
 <p><a href="http://www.ezs3.com/public/What_bitrate_should_I_use_when_encoding_my_video_How_do_I_optimize_my_video_for_the_web.cfm" class="uri">http://www.ezs3.com/public/What_bitrate_should_I_use_when_encoding_my_video_How_do_I_optimize_my_video_for_the_web.cfm</a></p>
 </div>
 
