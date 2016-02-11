@@ -1,0 +1,73 @@
+---
+title       : Audio
+subtitle    : 
+author      :  
+job         : Edgardo Morales
+logo        : bloomberg_shield.png
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : zenburn   # 
+url:
+  lib: ../../libraries
+  assets: ../../assets
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+
+
+
+## Herramientas Disponibles
+
+* Open Source
+* Comerciales
+* Disponibles
+
+---
+
+## Recursos
+
+```
+Cut video ffmpeg
+
+ffmpeg -ss 00:00:03 -t 00:00:08 -i movie.mp4 -acodec copy -vcodec copy -async 1 cut.mp4
+
+Extract Audio from video
+ffmpeg -i video.flv -ab 160k -ac 2 -ar 44100 -vn audio.mp3
+
+Extract Fragment from video
+ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
+
+ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 -strict -2 cut.mp4
+
+Extract Scene from video
+ffmpeg -ss 00:00:30 -i orginalfile -t 00:00:05 -vcodec copy -acodec copy newfile
+
+```
+	
+Do you need to cut video with re-encoding or without re-encoding mode? You can try to following below command.
+```
+Synopsis: ffmpeg -i [input_file] -ss [start_seconds] -t [duration_seconds] [output_file]
+```
+### use FFmpeg cut mp4 video without re-encoding
+
+Example:
+ffmpeg -i source.mp4 -ss 00:00:05 -t 00:00:10 -c copy cut_video.mp4
+
+### use FFmpeg cut mp4 video with re-encoding
+
+Example:
+ffmpeg -i source.mp4 -ss 00:00:05 -t 00:00:10 -async 1 -strict -2 cut_video.mp4
+
+---
+
+# Enconde perserve quality
+```
+ffmpeg  -i input.flv -ar 22050 salida.mp4
+
+```
+#Bitrate Encode mp4
+
+http://www.ezs3.com/public/What_bitrate_should_I_use_when_encoding_my_video_How_do_I_optimize_my_video_for_the_web.cfm
+
+
+

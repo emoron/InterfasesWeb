@@ -1,8 +1,8 @@
 ---
-title       : The Data Scientist's Toolbox
+title       : Extracción de Audio
 subtitle    : 
 author      :  
-job         : Johns Hopkins Bloomberg School of Public Health
+job         : Edgardo Morales
 logo        : bloomberg_shield.png
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -15,36 +15,10 @@ mode        : selfcontained # {standalone, draft}
 ---
 
 
-```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
-# make this an external chunk that can be included in any file
-options(width = 70)
-opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache = T, cache.path = '.cache/', fig.path = 'fig/')
 
-options(xtable.type = 'html')
-knit_hooks$set(inline = function(x) {
-  if(is.numeric(x)) {
-    round(x, getOption('digits'))
-  } else {
-    paste(as.character(x), collapse = ', ')
-  }
-})
-knit_hooks$set(plot = knitr:::hook_plot_html)
-```
+## Herramientas Disponibles
 
-## What do data scientists do? 
-
-* Define the question
-* Define the ideal data set
-* Determine what data you can access
-* Obtain the data
-* Clean the data
-* Exploratory data analysis
-* Statistical prediction/modeling
-* Interpret results
-* Challenge results
-* Synthesize/write up results
-* Create reproducible code
-* Distribute results to other people
+* Open Source
 
 
 ---
