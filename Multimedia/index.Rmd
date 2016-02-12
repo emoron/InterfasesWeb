@@ -1,12 +1,12 @@
 ---
 title       : Audio
-subtitle    : 
+subtitle    :
 author      :  
 job         : Edgardo Morales
 logo        : bloomberg_shield.png
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : zenburn   # 
+hitheme     : zenburn   #
 url:
   lib: ../../libraries
   assets: ../../assets
@@ -30,24 +30,37 @@ mode        : selfcontained # {standalone, draft}
 Cut video ffmpeg
 
 ffmpeg -ss 00:00:03 -t 00:00:08 -i movie.mp4 -acodec copy -vcodec copy -async 1 cut.mp4
-
+```
 Extract Audio from video
+```
 ffmpeg -i video.flv -ab 160k -ac 2 -ar 44100 -vn audio.mp3
 
+-i indicates the input
+-ab indicates the bit rate (in this example 160kb/sec)
+-vn means no video ouput
+-ac 2 means 2 channels
+-ar 44100 indicates the sampling frequency.
+```
+
+Read more: http://linuxpoison.blogspot.mx/2010/04/how-to-extract-audio-from-video-file.html#ixzz3zzNRWf2t
 Extract Fragment from video
+```
 ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
 
 ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 -strict -2 cut.mp4
-
+```
 Extract Scene from video
+```
 ffmpeg -ss 00:00:30 -i orginalfile -t 00:00:05 -vcodec copy -acodec copy newfile
 
 ```
-	
+
 Do you need to cut video with re-encoding or without re-encoding mode? You can try to following below command.
+
 ```
 Synopsis: ffmpeg -i [input_file] -ss [start_seconds] -t [duration_seconds] [output_file]
 ```
+
 ### use FFmpeg cut mp4 video without re-encoding
 
 Example:
@@ -67,7 +80,7 @@ ffmpeg  -i input.flv -ar 22050 salida.mp4
 ```
 ## Bitrate Encode mp4
 
-When choosing between the MP4, MOV, FLV, WMV and AVI containers, MP4 is the best option. The complexity of the MOV container can cause devices to stall when playing video. The FLV container is only supported by the Flash plugin, which is not supported by the new HTML5 standard and Apple mobile devices such as the iPhone. The WMV container requires specialized plugins and is generally only supported by Microsoft products such the Zune, or Silverlight. 
+When choosing between the MP4, MOV, FLV, WMV and AVI containers, MP4 is the best option. The complexity of the MOV container can cause devices to stall when playing video. The FLV container is only supported by the Flash plugin, which is not supported by the new HTML5 standard and Apple mobile devices such as the iPhone. The WMV container requires specialized plugins and is generally only supported by Microsoft products such the Zune, or Silverlight.
 
 The MP4 container is almost universally supported: Apple, Microsoft, Flash, and HTML5 all offer support for MP4 (there are some outliers). On top of that MP4 can use the H.264 video codec and the AAC audio codec, compatibility wise they are the best choices for compressing your video. H.264 video is supported by just about any player, browser, plugin and device available. It also offers one of the best algorithms for compressing your video on top of being freely available.
 
@@ -87,23 +100,23 @@ The frame rate is how many unique consecutive images are displayed per second in
 
 If you are not sure what your target connection speed is and you are not shooting to stream your videos, but do not want an abundant amount of bandwidth cost from Amazon, one method that works really well in determining a good bitrate is the Kush Gauge. To find a decent bitrate simply multiply the target pixel count by the frame rate; then multiply the result by a factor of 1, 2 or 4, depending on the amount of motion in the video; and then multiply that result by 0.07 to get the bit rate in bps. Divide your result by 1,000 to get a kbps estimate or by 1,000,000 to get a Mbps estimate.
 
-Kush gauge: pixel count x motion factor x 0.07 ÷ 1000 = bit rate in kbps
+Kush gauge: pixel count x motion factor x 0.07 ï¿½ 1000 = bit rate in kbps
 (frame width x height = pixel count) and motion factor is 1,2 or 4
 Screencast example
 For example if your video is a low motion 5fps screen cast in a 1280 x 720 frame size you would have a formula like this:
 
-1280 x 720 = 921,600 pixel count 
-5 frames per second 
-1 = Low Motion 
+1280 x 720 = 921,600 pixel count
+5 frames per second
+1 = Low Motion
 
 (921,600 x 5) x 1 x 0.07 = 322,560 bps / 1000 = 322 kbps bitrate
 
 High action video example
 Another example on the other side of the spectrum would be a 24 fps high action shot of an action scene with multiple quick cuts in a 1920 x 1080 frame size:
 
-1920 x 1080 = 2,073,600 pixel count 
-24 frames per second 
-4 = High Motion 
+1920 x 1080 = 2,073,600 pixel count
+24 frames per second
+4 = High Motion
 
 (2,073,600 x 24) x 4 x 0.07 = 13,934,592 bps / 1000 = 13,934 kbps bitrate
 
@@ -122,6 +135,3 @@ If you are completely lost right now and having trouble deciding what your video
 # Referencias
 
 http://www.ezs3.com/public/What_bitrate_should_I_use_when_encoding_my_video_How_do_I_optimize_my_video_for_the_web.cfm
-
-
-
