@@ -13,5 +13,5 @@ Todo ello no sería posible sin las nuevas tecnologías de html5, javascript y o
 - Conocer los lenguajes de programación necesarios para el desarrollo de aplicaciones enriquecidas para la web.
 - Identificar las ventajas de un desarrollo estructurado.
 - Crear librerias para construcción de aplicaciones.
-
+- Generar Proyectos basados en Frameworks enriquecidos para creación acelerada.
 
