@@ -1,3 +1,3 @@
 # Herramientas Scaffolding
 
-(createJs)[http://www.createjs.com/]
+[createJs - Toolbox for JavaScript Applications] (http://www.createjs.com/)
