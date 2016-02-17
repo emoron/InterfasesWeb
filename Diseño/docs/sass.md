@@ -67,7 +67,7 @@ $secundary-color
 ```
 Los mixins permiten reutilizar características de algún elemento que deseemos reutilizar en nuestro proyecto.
 
-```
+```css
 .box {
   border-radius: 4px;
   border-top-right-radius: 8px;
