@@ -1,16 +1,20 @@
 body{
-	background-color: #eee;
+	background-color: #333;
+	font-family: Futura,"Trebuchet MS",sans-serif;
+	> h1 {
+	font-size: 3em;
+	color: #eee;
+	margin: 5px 0 0 5px;
+	}
 }
 
-.blog {
 
-	> h1 {
-	color: red;
-	border: 1px solid red;
-	}
+.entry {
 	
-	.entry {
-	
+	backgound:white;
+	margin: 5px;
+	padding:5px;
+
 	h1 {
 	font-size: 20px;
 	color: blue;
