@@ -77,9 +77,10 @@ Los mixins permiten reutilizar características de algún elemento que deseemos 
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   backgroud: #345; }
-``
-aplicando mixins tenemos:
 ```
+aplicando mixins tenemos:
+
+```css
 @mixin roundy{
     border-radius: 4px;
     border-top-right-radius:8px;
