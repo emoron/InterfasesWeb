@@ -37,10 +37,16 @@ body{
 
 // Agregamos Mixins
 
-.box {
+// inicia con @ Mixin 
+
+
+@mixin roundy{
 	border-radius: 4px;
 	border-top-right-radius:8px;
 	border-top-left-radius: 8px;
+}
+.box {
+	
 }
 
 .button{
