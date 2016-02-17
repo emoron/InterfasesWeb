@@ -96,3 +96,11 @@ aplicando mixins tenemos:
 }
 ```
 
+Los Mixins tienen la característa que pueden recibir argumentos que son pasados al contenido del mismo.
+```css
+@mixin roundy($radius-one,$radius-two){
+    border-radius: $radius-one;
+    border-top-right-radius:$radius-two;
+    border-top-left-radius: $radius-two;
+}
+```
