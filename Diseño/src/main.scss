@@ -1,6 +1,6 @@
 $primary-color: #369;
 $margin: 5px;
-$padding: $margin + 2 pts;
+$padding: $margin *1.5;
 body{
 	background-color: $primary-color;
 	font-family: Futura,"Trebuchet MS",sans-serif;
