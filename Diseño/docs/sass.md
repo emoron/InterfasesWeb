@@ -56,4 +56,10 @@ la compilación entregará lo siguiente:
 2. Creamos una Hoja de Estilo de manera similar a [Git Source](https://github.com/emoron/ProgrammingEveryone/blob/66a43eb8ea0ad9898cf1031238009d918c319df3/Dise%C3%B1o/src/main.scss).  
 3. De manera similar se agregan estilos para casa elemento del documento.  
 4. Ahora incluiremos [modernizr](https://modernizr.com/) para permitir compatibilidad con otros browser. Modernizr se encarga de detectar las características que nuestro navegador ofrece. [Git Source](https://github.com/emoron/ProgrammingEveryone/commit/bcc104b020c134ec88830b417c16335a3b6fd1f1)    
-5. Adicionalmente ahora probaremos el uso del operador '&' el cual nos permite copiar parte del codigo que se utiliza en cierta sección.[Git Source](https://github.com/emoron/ProgrammingEveryone/commit/83c974afe3222791992c25df00b081a34db58a0f)  
+5. Adicionalmente ahora probaremos el uso del operador '&' el cual nos permite copiar parte del codigo que se utiliza en cierta sección.[Git Source](https://github.com/emoron/ProgrammingEveryone/commit/83c974afe3222791992c25df00b081a34db58a0f)
+
+## Variables, Mixins
+* Las variables con contenedores de  valores
+* Todas las variables inician con el signo de $.
+
+
