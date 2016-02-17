@@ -15,8 +15,9 @@ Si usted se encuenta en windows es necesario la instalación de [Ruby primero](h
 $ sass input.scss output.css
 $ sass --version
 ```
-
+Además es posible decirle a sass que vigile los cambios en los archivos de todo el directorio.
 ```bash
+$ sass --watch input.scss:output.css
 $ sass test.scss
 ```
 
