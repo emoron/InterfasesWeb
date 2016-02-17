@@ -13,16 +13,13 @@ body {
   .entry h1 {
     font-size: 1.2em;
     color: blue; }
+  .entry .date {
+    font-size: 0.3em;
+    color: #333; }
+  .entry a {
+    color: #333; }
   .entry p {
     font-size: 12px;
     margin: 20px; }
-    html.columns .entry p {
-      column-count: 2;
-      column-gap: 10px;
-      margin: 10px; }
-    .entry p a {
-      color: red; }
-      .entry p a:hover {
-        color: pink; }
 
 /*# sourceMappingURL=main.css.map */

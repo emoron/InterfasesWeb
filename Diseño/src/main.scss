@@ -23,23 +23,15 @@ body{
 		font-size: 0.3em;
 		color:#333;
 	}
+	a{
+		color:#333;
+	}
 	p {
 		font-size: 12px;
 		margin: 20px;
-		
-		html.columns &{
-			column-count: 2;
-			column-gap:10px;
-			margin: 10px;
+	
 		}
 
-		a{
-		color:red;
-		&:hover{
-			color: pink;
-		}
-		}
-
-	}
+	
 	}
 
