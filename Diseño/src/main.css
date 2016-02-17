@@ -1,21 +1,54 @@
-body {
-  background-color: #369;
-  font-family: Futura,"Trebuchet MS",sans-serif; }
-  body > h1 {
-    font-size: 3em;
-    color: #eee;
-    margin: 5px 0 0 5px; }
+/*
+Error: Incompatible units: 'pts' and 'px'.
+        on line 2 of main.scss
 
-.entry {
-  background: white;
-  margin: 5px;
-  padding: 5px; }
-  .entry h1 {
-    font-size: 1.2em; }
-  .entry .date {
-    font-size: 0.3em;
-    color: #369; }
-  .entry a {
-    color: #369; }
+1: $primary-color: #369;
+2: $margin: 5px + 2pts;
+3: body{
+4: 	background-color: $primary-color;
+5: 	font-family: Futura,"Trebuchet MS",sans-serif;
+6: 	> h1 {
+7: 	font-size: 3em;
 
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+main.scss:2
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/value/number.rb:446:in `coercion_factor'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/value/number.rb:367:in `coerce'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/value/number.rb:427:in `operate'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/value/number.rb:94:in `plus'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/tree/operation.rb:82:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:469:in `visit_variable'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:414:in `run'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Incompatible units: 'pts' and 'px'.\A         on line 2 of main.scss\A \A 1: $primary-color: #369;\A 2: $margin: 5px + 2pts;\A 3: body{\A 4: 	background-color: $primary-color;\A 5: 	font-family: Futura,\"Trebuchet MS\",sans-serif;\A 6: 	> h1 {\A 7: 	font-size: 3em;"; }
