@@ -61,5 +61,7 @@ la compilación entregará lo siguiente:
 ## Variables, Mixins
 * Las variables con contenedores de  valores
 * Todas las variables inician con el signo de $.
-
-
+```css
+$primary-color
+$secundary-color
+```
