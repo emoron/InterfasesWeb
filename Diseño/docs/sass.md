@@ -20,10 +20,10 @@ Además es posible decirle a sass que vigile los cambios en los archivos de todo
 $ sass --watch input.scss:output.css
 $ sass test.scss
 ```
-
+Esto nos permitirá vigilar los cambios en los archivos scss y generar automaticamente la salida __css__ de nuestro proyecto.  
 Aplicaciones utiles para Sass se encuentra [scout](mhs.github.io/scout-app/) es una aplicación que facilita el manejo de SAss y [Compass](Compass.html)     
 
-Esto nos permitirá vigilar los cambios en los archivos scss y generar automaticamente la salida __css__ de nuestro proyecto.
+
 ## Nesting
 
 **Practica 1.** Escribir un pequeño blog usando Sass.  
