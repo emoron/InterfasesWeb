@@ -28,7 +28,7 @@ A continuación varios recursos para elegir la fuente cuando estamos trabajando 
 [Typecast] is a web-based design tool with a strong focus on typography. It is easy to use and comes along with an extensive library of elements. Its ease of use, solid typography defaults and customizing possibilities make it the perfect tool to set up your web typography. You can also export the generated HTML and CSS to integrate it into your project later on.
 
 [Untangling Web Typography](https://24ways.org/2013/untangling-web-typography/)  
-[TypeCast]: http://typecast.com/
+
 [Interactive Guide for Blog Typography](http://www.kaikkonendesign.fi/typography/#section/1)
 [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>  
 [Font Pair Help](http://fontpair.co/)
@@ -40,3 +40,8 @@ A continuación varios recursos para elegir la fuente cuando estamos trabajando 
 [Simple template for scientific manuscripts in R markdown](http://www.r-bloggers.com/simple-template-for-scientific-manuscripts-in-r-markdown/)  
 [pandoc Templates](https://github.com/kjhealy/pandoc-templates)  
 [WebChimera](https://github.com/RSATom/WebChimera.js/wiki)  
+
+
+### Referencias
+
+[TypeCast]: http://typecast.com/
