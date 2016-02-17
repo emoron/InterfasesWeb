@@ -28,5 +28,5 @@ Practica 1. Escribir un pequeño blog usando Sass
 1. Puedes obtener el codigo [HTML](https://github.com/emoron/ProgrammingEveryone/commit/72b8cf6e203c56c54197b941380ca3025e87fe4f)
 2. Creamos una Hoja de Estilo de manera similar a [CSS](https://github.com/emoron/ProgrammingEveryone/blob/66a43eb8ea0ad9898cf1031238009d918c319df3/Dise%C3%B1o/src/main.scss).
 3. De manera similar se agregan estilos para casa elemento del documento.
-4. Ahora incluiremos [modernizr](https://modernizr.com/) para permitir compatibilidad con otros browser. [Git Source](https://github.com/emoron/ProgrammingEveryone/commit/bcc104b020c134ec88830b417c16335a3b6fd1f1)
+4. Ahora incluiremos [modernizr](https://modernizr.com/) para permitir compatibilidad con otros browser. Modernizr se encarga de detectar las características que nuestro navegador ofrece. [Git Source](https://github.com/emoron/ProgrammingEveryone/commit/bcc104b020c134ec88830b417c16335a3b6fd1f1)
 5. 
