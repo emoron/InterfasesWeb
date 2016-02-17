@@ -21,5 +21,6 @@ sass test.scss
 ```
 sass -watch .
 ```
+Esto nos permitirá vigilar los cambios en los archivos scss y generar automaticamente la salida __css__ de nuestro proyecto.
 ## Nesting
 
