@@ -1,11 +1,12 @@
 $primary-color: #369;
+$margin: 5px;
 body{
 	background-color: $primary-color;
 	font-family: Futura,"Trebuchet MS",sans-serif;
 	> h1 {
 	font-size: 3em;
 	color: #eee;
-	margin: 5px 0 0 5px;
+	margin: $margin 0 0 5px;
 	}
 }
 
