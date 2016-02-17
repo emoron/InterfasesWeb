@@ -22,9 +22,7 @@ $ sass test.scss
 ```
 
 Aplicaciones utiles para Sass se encuentra [scout](mhs.github.io/scout-app/) es una aplicación que facilita el manejo de SAss y [Compass](Compass.html)     
-```
-sass -watch .
-```
+
 Esto nos permitirá vigilar los cambios en los archivos scss y generar automaticamente la salida __css__ de nuestro proyecto.
 ## Nesting
 
