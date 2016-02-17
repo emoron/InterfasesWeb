@@ -24,3 +24,5 @@ sass -watch .
 Esto nos permitirá vigilar los cambios en los archivos scss y generar automaticamente la salida __css__ de nuestro proyecto.
 ## Nesting
 
+Practica 1. Escribir un pequeño blog usando Sass
+1. Puedes obtener el codigo [HTML](https://github.com/emoron/ProgrammingEveryone/commit/72b8cf6e203c56c54197b941380ca3025e87fe4f)  
