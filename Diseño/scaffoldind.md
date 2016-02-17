@@ -33,3 +33,10 @@ A continuación varios recursos para elegir la fuente cuando estamos trabajando 
 [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>  
 [Font Pair Help](http://fontpair.co/)
 [Bourbon Tutorial](https://www.git-tower.com/learn/bourbon-neat-bitters/advanced/custom-mixins#start) 
+
+
+### Tutoriales
+[Build your own Blog](https://www.git-tower.com/learn/build-your-own-blog/design/blog-typography#start)
+[Simple template for scientific manuscripts in R markdown](http://www.r-bloggers.com/simple-template-for-scientific-manuscripts-in-r-markdown/)  
+[pandoc Templates](https://github.com/kjhealy/pandoc-templates)  
+[WebChimera](https://github.com/RSATom/WebChimera.js/wiki)  
