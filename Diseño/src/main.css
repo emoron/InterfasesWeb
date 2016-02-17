@@ -1,5 +1,5 @@
 /*
-Error: Invalid CSS after "#": expected id name, was "# Agregamos Mixins"
+Error: Invalid CSS after "#": expected id name, was " Agregamos Mixins"
         on line 38 of main.scss
 
 33: 	}
@@ -7,7 +7,7 @@ Error: Invalid CSS after "#": expected id name, was "# Agregamos Mixins"
 35: 	
 36: }
 37: 
-38: ## Agregamos Mixins
+38: # Agregamos Mixins
 39: 
 40: .box {
 41: 	border-radius: 4px;
@@ -63,4 +63,4 @@ main.scss:38
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"#\": expected id name, was \"# Agregamos Mixins\"\A         on line 38 of main.scss\A \A 33: 	}\A 34: 	\A 35: 	\A 36: }\A 37: \A 38: ## Agregamos Mixins\A 39: \A 40: .box {\A 41: 	border-radius: 4px;\A 42: 	border-top-right-radius:8px;\A 43: 	border-top-left-radius: 8px;"; }
+  content: "Error: Invalid CSS after \"#\": expected id name, was \" Agregamos Mixins\"\A         on line 38 of main.scss\A \A 33: 	}\A 34: 	\A 35: 	\A 36: }\A 37: \A 38: # Agregamos Mixins\A 39: \A 40: .box {\A 41: 	border-radius: 4px;\A 42: 	border-top-right-radius:8px;\A 43: 	border-top-left-radius: 8px;"; }
