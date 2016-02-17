@@ -9,7 +9,7 @@ Sass puede ser utilizado en tres formas: command-tool, módulo para ruby indepen
 ```
  gem install sass
 ```
-Si usted se encuenta en windows es necesario la instalación de [Ruby primero](http://rubyinstaller.org/download.html)  
+Si usted se encuenta en windows es necesario la instalación de [Ruby primero](http://rubyinstaller.org/downloads/)  
 
 ```shell
 $ sass input.scss output.css
@@ -51,6 +51,7 @@ la compilación entregará lo siguiente:
 
 
 **Practica 1.** Escribir un pequeño blog usando Sass.  
+
 1. Puedes obtener el codigo [Git Source](https://github.com/emoron/ProgrammingEveryone/commit/72b8cf6e203c56c54197b941380ca3025e87fe4f)  
 2. Creamos una Hoja de Estilo de manera similar a [Git Source](https://github.com/emoron/ProgrammingEveryone/blob/66a43eb8ea0ad9898cf1031238009d918c319df3/Dise%C3%B1o/src/main.scss).  
 3. De manera similar se agregan estilos para casa elemento del documento.  
