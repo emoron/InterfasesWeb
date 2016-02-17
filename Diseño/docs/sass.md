@@ -11,7 +11,7 @@ Sass puede ser utilizado en tres formas: command-tool, módulo para ruby indepen
 ```
 Si usted se encuenta en windows es necesario la instalación de [Ruby primero](http://rubyinstaller.org/download.html)  
 
- ```
+```
  $sass --version
 ```
 
