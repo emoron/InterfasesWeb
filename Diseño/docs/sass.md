@@ -13,11 +13,11 @@ Si usted se encuenta en windows es necesario la instalación de [Ruby primero](h
 
 ```shell
 $ sass input.scss output.css
- $sass --version
+$ sass --version
 ```
 
 ```bash
-sass test.scss
+$ sass test.scss
 ```
 
 * Aplicaciones utiles para Sass se encuentra [scout](mhs.github.io/scout-app/) es una aplicación que facilita el manego de SAss y [Compass](Compass.html)     
