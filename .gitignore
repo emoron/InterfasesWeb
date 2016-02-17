@@ -1,4 +1,8 @@
 
 assets/*
 lib/*
-Diseño/lib/*
+Diseño/lib/*.*
+Diseño/config.codekit
+Diseño/.codekit-cache
+Diseño/node-modules/*
+
