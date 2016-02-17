@@ -28,6 +28,9 @@ body{
 
 		a{
 		color:red;
+		&:hover{
+			color: pink;
+		}
 		}
 
 	}
