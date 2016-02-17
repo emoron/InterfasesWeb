@@ -3,7 +3,7 @@
 ## Herramientas de Diseño
 [createJs - Toolbox for JavaScript Applications](http://www.createjs.com/)  
 [Yeoman - Framework for scaffold applications](http://yeoman.io/codelab/write-unit-tests.html#toc)   
-[GulpJs](http://gulpjs.com/)  
+[GulpJs](http://gulpjs.com/) Es una Herramienta que facilita la gestion de tareas comunes, como compilar y guardar los archivos generados en las carpetas correspondientes.  
 
 ### Diseño Basado en Grid
 
