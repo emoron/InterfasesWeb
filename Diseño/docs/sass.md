@@ -65,3 +65,32 @@ la compilación entregará lo siguiente:
 $primary-color
 $secundary-color
 ```
+Los mixins permiten reutilizar características de algún elemento que deseemos reutilizar en nuestro proyecto.
+
+```
+.box {
+  border-radius: 4px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px; }
+.button {
+  border-radius: 4px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  backgroud: #345; }
+``
+aplicando mixins tenemos:
+```
+@mixin roundy{
+    border-radius: 4px;
+    border-top-right-radius:8px;
+    border-top-left-radius: 8px;
+}
+.box {
+    @include roundy;
+}
+
+.button{
+    @include roundy;
+    backgroud: #345;
+}
+```
