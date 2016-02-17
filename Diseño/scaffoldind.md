@@ -16,13 +16,7 @@
 
 ### Proyecto Final
 
-Colons can be used to align columns.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
 
 [Proyecto Final](https://airtable.com/features)  
 
@@ -38,7 +32,7 @@ A continuación varios recursos para elegir la fuente cuando estamos trabajando 
 [Untangling Web Typography](https://24ways.org/2013/untangling-web-typography/)  
 
 [Interactive Guide for Blog Typography](http://www.kaikkonendesign.fi/typography/#section/1)
-[PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>  
+[PlDb]: https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md  
 [Font Pair Help](http://fontpair.co/)
 [Bourbon Tutorial](https://www.git-tower.com/learn/bourbon-neat-bitters/advanced/custom-mixins#start) 
 
