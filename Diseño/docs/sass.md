@@ -19,6 +19,7 @@ sass test.scss
 
 * Aplicaciones utiles para Sass se encuentra [scout](mhs.github.io/scout-app/) es una aplicación que facilita el manego de SAss y [Compass](Compass.html)     
 ```
-sass -watch
+sass -watch .
 ```
-* 
+## Nesting
+
