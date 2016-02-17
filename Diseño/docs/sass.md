@@ -24,7 +24,7 @@ sass -watch .
 Esto nos permitirá vigilar los cambios en los archivos scss y generar automaticamente la salida __css__ de nuestro proyecto.
 ## Nesting
 
-Practica 1. Escribir un pequeño blog usando Sass
+Practica 1. Escribir un pequeño blog usando Sass.  
 1. Puedes obtener el codigo [Git Source](https://github.com/emoron/ProgrammingEveryone/commit/72b8cf6e203c56c54197b941380ca3025e87fe4f)  
 2. Creamos una Hoja de Estilo de manera similar a [Git Source](https://github.com/emoron/ProgrammingEveryone/blob/66a43eb8ea0ad9898cf1031238009d918c319df3/Dise%C3%B1o/src/main.scss).  
 3. De manera similar se agregan estilos para casa elemento del documento.  
