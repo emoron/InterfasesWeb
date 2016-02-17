@@ -3,7 +3,7 @@
 * Sass significa "Extension CSS Language" o "Css con superpoderes"
 * Transcompiler Languague
 * Similar a CoffeScript
-* Se instala a traves del sistema de Ruby Gem
+Sass puede ser utilizado en tres formas: command-tool, aplicación independiente o como plugin para cualquier aplicación incluyendo ruby o Merb. El primer paso es intalar a través del sistema de Ruby Gem.  
 
 ```
 
