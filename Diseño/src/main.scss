@@ -2,12 +2,14 @@ body{
 	background-color: #eee;
 }
 
-.blog > h1 {
+.blog {
+
+	> h1 {
 	color: red;
 	border: 1px solid red;
-}
-
-.blog .entry {
+	}
+	
+	.entry {
 	
 	h1 {
 	font-size: 20px;
@@ -28,5 +30,6 @@ body{
 	color:red;
 	}
 
+}
 }
 
