@@ -1,0 +1,11 @@
+body{
+	background-color: #eee;
+}
+.blog .entry h1 {
+	font-size: 20px;
+	color: blue;
+}
+
+.blog .entry p {
+	font-size: 12px
+}
