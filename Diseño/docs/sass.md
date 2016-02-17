@@ -39,7 +39,15 @@ Sas permite que las reglas CSS sean anidadas una con otra. La regla interna sól
   }
 }
 ```
-
+la compilación entregará lo siguiente:
+```css
+#main p {
+  color: #00ff00;
+  width: 97%; }
+  #main p .redbox {
+    background-color: #ff0000;
+    color: #000000; }
+```
 
 **Practica 1.** Escribir un pequeño blog usando Sass.  
 1. Puedes obtener el codigo [Git Source](https://github.com/emoron/ProgrammingEveryone/commit/72b8cf6e203c56c54197b941380ca3025e87fe4f)  
