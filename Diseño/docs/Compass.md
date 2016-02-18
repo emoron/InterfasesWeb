@@ -10,5 +10,5 @@ Los *Grids* proporcionan la generación rápida de prototipos y nuevas capas.
 
 ## Seleccionar un Grid Semantico vs un Pragmatico.  
 
-La mayoria de las tecnologías no tienen detractores, los programadores del campo de la web semantica consideran que el markup debería ser contenido y datos; y no indicar nada acerca de la presentación. Por otro lado los pragmáticos argumentan que la semantica reside en el markup y no en los nombres de las clases.
+La mayoría de las tecnologías no tienen detractores, los programadores del campo de la web semantica consideran que el markup debería ser contenido y datos; y no indicar nada acerca de la presentación. Por otro lado los pragmáticos argumentan que la semantica reside en el markup y no en los nombres de las clases.
 Afortunadamente Compass permite seleccionar clases incluyendo los estilos del grid en sus propios selectores y mixins.  
