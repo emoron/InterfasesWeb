@@ -1,7 +1,7 @@
 # Compass
 
-* Framework para CSS basada en SaSS
-* Acelera el diseño de la CSS
+* Framework para CSS basada en SaSS  
+* Acelera el diseño de la CSS  
 * Basada en Patrones Reutilizables
 * Creación Acelerada de Sprints
 * Grid simple de CSS3
