@@ -14,4 +14,4 @@ La mayoría de las tecnologías no tienen detractores, los programadores del cam
 Afortunadamente Compass permite seleccionar clases incluyendo los estilos del grid en sus propios selectores y mixins.  
 
 ## Fluido vs Fijo  
-Debido al amplio rango de pantallas en la web, los diseñadores tienen dos opciones: seleccionar una distribución __razonable__ fija o implementar una distribución *fluida* 
+Debido al amplio rango de pantallas en la web, los diseñadores tienen dos opciones: seleccionar una distribución __razonable__ fija o implementar una distribución *fluida* permitiendo adaptar el contenido
