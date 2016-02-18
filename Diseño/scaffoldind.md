@@ -34,7 +34,7 @@ A continuación varios recursos para elegir la fuente cuando estamos trabajando 
 [Interactive Guide for Blog Typography](http://www.kaikkonendesign.fi/typography/#section/1)
 [PlDb]: https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md  
 [Font Pair Help](http://fontpair.co/)
-[Bourbon Tutorial](https://www.git-tower.com/learn/bourbon-neat-bitters/advanced/custom-mixins#start) 
+[Bourbon Tutorial](https://www.git-tower.com/learn/bourbon-neat-bitters/advanced/custom-mixins#start)
 
 
 ### Tutoriales
@@ -42,7 +42,7 @@ A continuación varios recursos para elegir la fuente cuando estamos trabajando 
 [Simple template for scientific manuscripts in R markdown](http://www.r-bloggers.com/simple-template-for-scientific-manuscripts-in-r-markdown/)  
 [pandoc Templates](https://github.com/kjhealy/pandoc-templates)  
 [WebChimera](https://github.com/RSATom/WebChimera.js/wiki)  
-
+[herramientas sass](http://mashable.com/2013/06/11/sass-compass-tools/#ZXMr6K_N_5qU)
 
 ### Referencias
 
