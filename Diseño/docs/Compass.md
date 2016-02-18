@@ -12,3 +12,6 @@ Los *Grids* proporcionan la generación rápida de prototipos y nuevas capas.
 
 La mayoría de las tecnologías no tienen detractores, los programadores del campo de la web semantica consideran que el markup debería ser contenido y datos; y no indicar nada acerca de la presentación. Por otro lado los pragmáticos argumentan que la semantica reside en el markup y no en los nombres de las clases.
 Afortunadamente Compass permite seleccionar clases incluyendo los estilos del grid en sus propios selectores y mixins.  
+
+## Fluido vs Fijo  
+Debido al amplio rango de pantallas en la web, los diseñadores tienen dos opciones: seleccionar una distribución __razonable__ 
