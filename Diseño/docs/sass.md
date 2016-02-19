@@ -220,4 +220,4 @@ Como buena práctica se recomienda crear archivos separados según el contexto d
 @import "pages/_about_us.scss";
 
 ```
-> Recordar que el orden en el que aparecen, es sumamente importante.  
+> Recordar que el orden en el que aparecen, es sumamente importante. Ya que la declaración de variables no declaradas, causará error de compilación.  
