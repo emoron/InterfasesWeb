@@ -189,7 +189,8 @@ a{
 
 En proyectos con gran cantidad de código es conveniente separar los componentes de la hoja de estilo, para su optimización. Sin embargo al momento de cargar el CSS en el navegador de los clientes, es conveniente mantener en un sólo archivo todas las declaraciones.
 
-Ahora creamos un archivo ```_variables.scss```y colocaremos las declaraciones de colores.
+Ahora creamos un archivo ```_variables.scss```y colocaremos las declaraciones de colores. Debe llevar un ```underscore``` para que sass no genere el archivo ```css``` correspondiente.  
+
 ```
 $background: desaturate(#cd3cc1);
 $text-color: mix(#369,#187;
