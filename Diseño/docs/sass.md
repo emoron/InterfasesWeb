@@ -199,7 +199,7 @@ $darken-Title: darken($text-color);
 Dentro del archivo de ```styles.scss``` colocaremos:
 
 ```
-@import variables;
+@import "variables";
 
 body{
   background: $backgroud;
