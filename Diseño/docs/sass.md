@@ -104,3 +104,22 @@ Los Mixins tienen la característa que pueden recibir argumentos que son pasados
     border-top-left-radius: $radius-two;
 }
 ```
+
+Paletas de Colores
+
+Sass puede generar paletas de colores, o basados en los colores complementarios, normalmente son seleccionades de la paleta de colores pero nos ayuda seleccionar automaticamente.
+
+$background: #cd3cc1;
+$text-color: #3ccd48;
+
+body{
+  background: $backgroud;
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+a{
+  color: $text-color;
+}
+```
+  
