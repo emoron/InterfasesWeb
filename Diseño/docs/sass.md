@@ -154,11 +154,26 @@ a{
   color: $darken-Title;
 }
 ```
-Para seleccionar los colores complementarios
+Para seleccionar los colores complementarios.  
 
 ```
 $background: #cd3cc1;
 $text-color: complement(#3ccd48);
+$darken-Title: darken($text-color);
+body{
+  background: $backgroud;
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+a{
+  color: $darken-Title;
+}
+```
+Incluso podemos mezclar colores, para lograr efectos interesantes.  
+```
+$background: desaturate(#cd3cc1);
+$text-color: mix(#369,#187;
 $darken-Title: darken($text-color);
 body{
   background: $backgroud;
