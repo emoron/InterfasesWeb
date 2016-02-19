@@ -212,4 +212,12 @@ a{
 }
 ```
 
-Como buena práctica se recomienda
+Como buena práctica se recomienda crear archivos separados según el contexto del documento de ésta manera el ```main.scss``` únicamente contiene la llamada a los archivos scss.
+
+```
+@import "_variables.scss";
+@import "_global.scss";
+@import "pages/_about_us.scss";
+
+```
+> Recordar que el orden en el que aparecen, es sumamente importante.  
