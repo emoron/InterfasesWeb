@@ -143,7 +143,7 @@ a{
 ```
 $background: #cd3cc1;
 $text-color: #3ccd48;
-
+$darken-Title: darken($text-color);
 body{
   background: $backgroud;
   font-family: sans-serif;
@@ -151,6 +151,22 @@ body{
 }
 
 a{
-  color: darken($text-color, 20%);
+  color: $darken-Title;
+}
+```
+Para seleccionar los colores complementarios
+
+```
+$background: #cd3cc1;
+$text-color: complement(#3ccd48);
+$darken-Title: darken($text-color);
+body{
+  background: $backgroud;
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+a{
+  color: $darken-Title;
 }
 ```
