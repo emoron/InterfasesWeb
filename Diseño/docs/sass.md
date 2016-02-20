@@ -156,6 +156,7 @@ a{
 ```
 Para seleccionar los colores complementarios.  
 
+
 ```
 $background: #cd3cc1;
 $text-color: complement(#3ccd48);
@@ -170,6 +171,7 @@ a{
   color: $darken-Title;
 }
 ```
+![Colores Complementarios](img/Color-Complementary-2.png)
 Incluso podemos mezclar colores, para lograr efectos interesantes.  
 ```
 $background: desaturate(#cd3cc1);
@@ -185,6 +187,7 @@ a{
   color: $darken-Title;
 }
 ```
+![Colores Complementarios](img/Color-Complementary.png)
 ## Importación de Partes de CSS
 
 En proyectos con gran cantidad de código es conveniente separar los componentes de la hoja de estilo, para su optimización. Sin embargo al momento de cargar el CSS en el navegador de los clientes, es conveniente mantener en un sólo archivo todas las declaraciones.
