@@ -171,7 +171,8 @@ a{
   color: $darken-Title;
 }
 ```
-![Colores Complementarios](img/Color-Complementary-2.png)
+<img src="img/Color-Complementary-2.png" alt="Drawing" style="width: 100px;"/>
+<img src="img/Color-Complementary.png" alt="Drawing" style="width: 100px;"/>
 Incluso podemos mezclar colores, para lograr efectos interesantes.  
 ```
 $background: desaturate(#cd3cc1);
@@ -187,7 +188,7 @@ a{
   color: $darken-Title;
 }
 ```
-![Colores Complementarios](img/Color-Complementary.png)
+
 ## Importación de Partes de CSS
 
 En proyectos con gran cantidad de código es conveniente separar los componentes de la hoja de estilo, para su optimización. Sin embargo al momento de cargar el CSS en el navegador de los clientes, es conveniente mantener en un sólo archivo todas las declaraciones.
@@ -318,6 +319,88 @@ body{
       width: 95%;
   }
 }
+}
+
+```
+
+## Funciones Iterativas
+
+```Compass
+.red{
+  color:red;
+}
+.green{
+  color: green;
+}
+.blue{
+  color:blue;
+}
+```
+
+Sass posee el operador ```#{variable}``` que puede ser utilizado para iterar sobre la variable.
+
+Tal que podemos declarar un mixin de la siguiente forma:
+```Compass
+@mixin color_class($color){
+  .#{$color}{
+    color:$color;
+    background-image: url("images/#{color}.jpg");
+  }
+}
+```
+Podemos incluir sentencias __@if__ para crear efectos en las sentencias.
+
+```Compass
+
+@mixin color_class($color){
+  .#{$color}{
+    color:$color;
+    background-image: url("images/#{color}.jpg");
+  @if $color == red {
+    border: 1px solid black;
+  }
+  }
+}
+```  
+
+Adicionalmente se tienen las sentencias __@else__ , __@else if __ para controlar el flujo del sass.
+
+```Compass
+@mixin box($width){
+  @if $width > 100px;
+    padding: 0px;
+  } @else if $width == 100 px{
+    padding: 5px;
+  }
+```
+Sass posee tambien loops __@for__ y __@each__
+
+```
+@for $i from 1 through 100 {
+  .box:nth-child(#{$i}){
+    background:darken(white,$i);
+  }
+}
+
+```
+
+```
+@each $member in tom,jhonny,colin, phil {
+  .bandmember.#{$member}{
+    backgroud:url("images/#{member}.jpg")
+  }
+}
+```
+## Mixins avanzados
+
+Es posible que un mixin reciba una cantidad dinamica de argumentos usando una variable dinamica [Ejemplo](../src/mixins.scss).
+
+```Compass
+@mixin band($name,$members...){
+  @each $member in $members{
+    .#{$name}.bandmember.#{$member}{
+      backgroud:url("images/#{member}.jpg")
+  }
 }
 
 ```

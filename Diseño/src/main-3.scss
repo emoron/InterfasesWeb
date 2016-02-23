@@ -1,0 +1,10 @@
+@mixin color_class($color){
+  .#{$color}{
+    color:$color;
+    background-image: url("images/#{color}.jpg");
+  }
+}
+
+@include color_class(blue);
+@include color_class(red);
+@include color_class(green);
