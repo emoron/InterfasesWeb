@@ -8,6 +8,13 @@
 El *Grid* es una capa que ayuda al uso eficiente de los espacios vacios en paginas web, proporciona dimensiones uniformes para columnas y filas de contenido, así como para otros elementos margenes y como para los gutters (espacio en blanco entre los elmentos).
 Los *Grids* proporcionan la generación rápida de prototipos y nuevas capas.  
 
+Compass esta organizado en modulos:
+- Color
+- Layout
+- Typography
+- Images
+- Sprite Sheets
+- css3
 ## Seleccionar un Grid Semantico vs un Pragmatico.  
 
 La mayoría de las tecnologías no tienen detractores, los programadores del campo de la web semantica consideran que el markup debería ser contenido y datos; y no indicar nada acerca de la presentación. Por otro lado los pragmáticos argumentan que la semantica reside en el markup y no en los nombres de las clases.
@@ -18,4 +25,23 @@ Debido al amplio rango de pantallas en la web, los diseñadores tienen dos opcio
 
 Ejemplos de Grid tenemos el [960 Fluid Grid](http://960.gs/), [Yui 3 Css Grid],[BluePrint](http://www.blueprintcss.org/) la importancia de los mismos reside que actualmente la máquinas de búsqueda aprovechan los llamados [microformatos](http://microformats.org) para determinar la relevancia de los contenidos de una página.
 
+## CSS reset
+
+Compass Posee algunos mixins para aplicar el Reset a nuestro sitio
+
+```
+@import "compass/reset";
+@include "reset";
+```
+
+Para incluir las utilidades de reset usamos
+
+```
+@import "compass/reset/utilities";
+@include "global-reset";
+```
+
+
+
+## Links Relacionados
 [Bourbon](bourbon.md)
