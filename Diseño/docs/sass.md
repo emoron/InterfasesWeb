@@ -202,7 +202,7 @@ $darken-Title: darken($text-color);
 ```
 Dentro del archivo de ```styles.scss``` colocaremos:
 
-```
+```Compass
 @import "_variables.scss";
 
 body{
@@ -218,10 +218,29 @@ a{
 
 Como buena práctica se recomienda crear archivos separados según el contexto del documento de ésta manera el ```main.scss``` únicamente contiene la llamada a los archivos scss.
 
-```
+```Compass
 @import "_variables.scss";
 @import "_global.scss";
 @import "pages/_about_us.scss";
 
 ```
 > Recordar que el orden en el que aparecen, es sumamente importante. Ya que la declaración de variables no declaradas, causará error de compilación.  
+
+
+## [Funciones SaSS](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#function_directives)
+
+Es posible definir funciones propias para realizar algunos calculos en nuestro diseño.
+
+```Compass
+$grid-width: 40px;
+$gutter-width: 10px;
+
+@function grid-width($n) {
+  @return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+
+#sidebar { width: grid-width(5); }
+```
+
+## Media Queries
+<<(Ejemplo de )[../src/mediaqueries.scss)
