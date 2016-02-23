@@ -17,3 +17,5 @@ Afortunadamente Compass permite seleccionar clases incluyendo los estilos del gr
 Debido al amplio rango de pantallas en la web, los diseñadores tienen dos opciones: seleccionar una distribución __razonable__ fija o implementar una distribución *fluida* permitiendo adaptar el contenido.
 
 Ejemplos de Grid tenemos el [960 Fluid Grid](http://960.gs/), [Yui 3 Css Grid],[BluePrint](http://www.blueprintcss.org/) la importancia de los mismos reside que actualmente la máquinas de búsqueda aprovechan los llamados [microformatos](http://microformats.org) para determinar la relevancia de los contenidos de una página.
+
+[Bourbon](borbon.md)
