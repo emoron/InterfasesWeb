@@ -243,4 +243,4 @@ $gutter-width: 10px;
 ```
 
 ## Media Queries
-<<(Ejemplo de )[../src/mediaqueries.scss)
+<<[../src/mediaqueries.scss]
