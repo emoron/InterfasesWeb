@@ -243,4 +243,81 @@ $gutter-width: 10px;
 ```
 
 ## Media Queries
-<<[../src/mediaqueries.scss]
+
+En ocaciones deseamos adaptar nuestro diseño para que responda al tamaño de la pantalla. El siguiente ejemplo se declaran clases para adaptarse [ver ejemplo](../src/mediaqueries.scss).  
+
+```Compass
+body{
+  font-family: Helvetica;
+}
+.content{
+  .sidebar{
+    background: #999;
+    color: white;
+    padding: 5px;
+    float: left;
+    width: 100px;
+    a{
+      display: block;
+      color:white;
+    }
+  }
+  .main{
+    padding: 5px;
+    background: #bbb;
+    display: @inline-block;
+    width: 60%;
+  }
+}
+
+@media (max-width:480px) {
+  .content{
+    .sidebar{
+      width: 95%;
+      a{
+        display: inline;
+      }
+    }
+    .main{
+      width: 95%;
+    }
+}
+```
+
+
+Para evitar repetir código Sass nos permite incluir las media Queries dentro de declaraciones anidadas.
+
+```Compass
+body{
+  font-family: Helvetica;
+}
+.content{
+  .sidebar{
+    background: #999;
+    color: white;
+    padding: 5px;
+    float: left;
+    width: 100px;
+    a{
+      display: block;
+      color:white;
+    }
+    @media (max-width:480px) {
+      width: 95%;
+      a{
+        display: inline;
+      }
+    }
+  }
+  .main{
+    padding: 5px;
+    background: #bbb;
+    display: @inline-block;
+    width: 60%;
+  @media (max-width:480px) {
+      width: 95%;
+  }
+}
+}
+
+```
