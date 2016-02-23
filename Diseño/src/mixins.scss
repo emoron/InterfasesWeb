@@ -1,0 +1,9 @@
+@mixin band($name,$members...){
+  @each $member in $members{
+    .#{$name}.bandmember.#{$member}{
+      backgroud:url("images/#{member}.jpg")
+  }
+}
+
+@include band(radiohead,thom,honny,colin);
+@include band(trent);

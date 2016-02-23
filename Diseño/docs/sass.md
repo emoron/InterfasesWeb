@@ -322,3 +322,85 @@ body{
 }
 
 ```
+
+## Funciones Iterativas
+
+```Compass
+.red{
+  color:red;
+}
+.green{
+  color: green;
+}
+.blue{
+  color:blue;
+}
+```
+
+Sass posee el operador ```#{variable}``` que puede ser utilizado para iterar sobre la variable.
+
+Tal que podemos declarar un mixin de la siguiente forma:
+```Compass
+@mixin color_class($color){
+  .#{$color}{
+    color:$color;
+    background-image: url("images/#{color}.jpg");
+  }
+}
+```
+Podemos incluir sentencias __@if__ para crear efectos en las sentencias.
+
+```Compass
+
+@mixin color_class($color){
+  .#{$color}{
+    color:$color;
+    background-image: url("images/#{color}.jpg");
+  @if $color == red {
+    border: 1px solid black;
+  }
+  }
+}
+```  
+
+Adicionalmente se tienen las sentencias __@else__ , __@else if __ para controlar el flujo del sass.
+
+```Compass
+@mixin box($width){
+  @if $width > 100px;
+    padding: 0px;
+  } @else if $width == 100 px{
+    padding: 5px;
+  }
+```
+Sass posee tambien loops __@for__ y __@each__
+
+```
+@for $i from 1 through 100 {
+  .box:nth-child(#{$i}){
+    background:darken(white,$i);
+  }
+}
+
+```
+
+```
+@each $member in tom,jhonny,colin, phil {
+  .bandmember.#{$member}{
+    backgroud:url("images/#{member}.jpg")
+  }
+}
+```
+## Mixins avanzados
+
+Es posible que un mixin reciba una cantidad dinamica de argumentos usando una variable dinamica [Ejemplo](../src/mixins.scss).
+
+```Compass
+@mixin band($name,$members...){
+  @each $member in $members{
+    .#{$name}.bandmember.#{$member}{
+      backgroud:url("images/#{member}.jpg")
+  }
+}
+
+```
