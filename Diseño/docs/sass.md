@@ -171,8 +171,8 @@ a{
   color: $darken-Title;
 }
 ```
-<img src="img/Color-Complementary-2.png" alt="Drawing" style="width: 200px;"/>
-<img src="img/Color-Complementary.png" alt="Drawing" style="width: 200px;"/>
+<img src="img/Color-Complementary-2.png" alt="Drawing" style="width: 100px;"/>
+<img src="img/Color-Complementary.png" alt="Drawing" style="width: 100px;"/>
 Incluso podemos mezclar colores, para lograr efectos interesantes.  
 ```
 $background: desaturate(#cd3cc1);
