@@ -171,7 +171,8 @@ a{
   color: $darken-Title;
 }
 ```
-![Colores Complementarios](img/Color-Complementary-2.png)
+<img src="img/Color-Complementary-2.png" alt="Drawing" style="width: 200px;"/>
+<img src="img/Color-Complementary.png" alt="Drawing" style="width: 200px;"/>
 Incluso podemos mezclar colores, para lograr efectos interesantes.  
 ```
 $background: desaturate(#cd3cc1);
@@ -187,7 +188,7 @@ a{
   color: $darken-Title;
 }
 ```
-![Colores Complementarios](img/Color-Complementary.png)
+
 ## Importación de Partes de CSS
 
 En proyectos con gran cantidad de código es conveniente separar los componentes de la hoja de estilo, para su optimización. Sin embargo al momento de cargar el CSS en el navegador de los clientes, es conveniente mantener en un sólo archivo todas las declaraciones.
