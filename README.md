@@ -1,4 +1,4 @@
-# ProgrammingEveryone
+# Diseño de Interfases Web
 
 Este material corresponde a las asignaturas de diseño de interfases web y de aplicaciones multimedia.
 
