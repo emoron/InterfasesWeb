@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/github.css" media="screen">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+</head>
+<body>
+<h2 id="sass">Sass</h2>
+<ul>
+<li>Sass significa &quot;Extension CSS Language&quot; o &quot;Css con superpoderes&quot;</li>
+<li>Transcompiler Languague</li>
+<li>Similar a CoffeScript.</li>
+</ul>
+<p>Sass puede ser utilizado en tres formas: command-tool, módulo para ruby independiente o como plugin para cualquier aplicación incluyendo ruby o Merb. El primer paso es intalar a través del sistema de Ruby Gem.</p>
+<pre><code> gem install sass</code></pre>
+<p>Si usted se encuenta en windows es necesario la instalación de <a href="http://rubyinstaller.org/downloads/">Ruby primero</a></p>
+<pre class="shell"><code>$ sass input.scss output.css
+$ sass --version</code></pre>
+<p>Además es posible decirle a sass que vigile los cambios en los archivos de todo el directorio.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">sass</span> --watch input.scss:output.css
+$ <span class="kw">sass</span> test.scss
+$ <span class="kw">sass</span> --watch app/sass:public/stylesheets</code></pre></div>
+<p>Esto nos permitirá vigilar los cambios en los archivos scss y generar automáticamente la salida <strong>css</strong> de nuestro proyecto.<br />
+Aplicaciones utiles para Sass se encuentra <a href="mhs.github.io/scout-app/">scout</a> es una aplicación que facilita el manejo de SAss y <a href="Compass.html">Compass</a></p>
+<h2 id="nesting">Nesting</h2>
+<p>Sas permite que las reglas CSS sean anidadas una con otra. La regla interna sólo aplica con el selector de la regla externa. Ejemplo:</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css"><span class="fl">#main</span> p <span class="kw">{</span>
+  <span class="kw">color:</span> <span class="dt">#00ff00</span><span class="kw">;</span>
+  <span class="kw">width:</span> <span class="dt">97%</span><span class="kw">;</span>
+
+  <span class="er">.redbox</span> <span class="er">{</span>
+    <span class="kw">background-color:</span> <span class="dt">#ff0000</span><span class="kw">;</span>
+    <span class="kw">color:</span> <span class="dt">#000000</span><span class="kw">;</span>
+  <span class="kw">}</span>
+}</code></pre></div>
+<p>la compilación entregará lo siguiente:</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css"><span class="fl">#main</span> p <span class="kw">{</span>
+  <span class="kw">color:</span> <span class="dt">#00ff00</span><span class="kw">;</span>
+  <span class="kw">width:</span> <span class="dt">97%</span><span class="kw">;</span> <span class="kw">}</span>
+  <span class="fl">#main</span> p <span class="fl">.redbox</span> <span class="kw">{</span>
+    <span class="kw">background-color:</span> <span class="dt">#ff0000</span><span class="kw">;</span>
+    <span class="kw">color:</span> <span class="dt">#000000</span><span class="kw">;</span> <span class="kw">}</span></code></pre></div>
+<p><strong>Practica 1.</strong> Escribir un pequeño blog usando Sass.</p>
+<ol style="list-style-type: decimal">
+<li>Puedes obtener el codigo <a href="https://github.com/emoron/ProgrammingEveryone/commit/72b8cf6e203c56c54197b941380ca3025e87fe4f">Git Source</a><br />
+</li>
+<li>Creamos una Hoja de Estilo de manera similar a <a href="https://github.com/emoron/ProgrammingEveryone/blob/66a43eb8ea0ad9898cf1031238009d918c319df3/Dise%C3%B1o/src/main.scss">Git Source</a>.<br />
+</li>
+<li>De manera similar se agregan estilos para casa elemento del documento.<br />
+</li>
+<li>Ahora incluiremos <a href="https://modernizr.com/">modernizr</a> para permitir compatibilidad con otros browser. Modernizr se encarga de detectar las características que nuestro navegador ofrece. <a href="https://github.com/emoron/ProgrammingEveryone/commit/bcc104b020c134ec88830b417c16335a3b6fd1f1">Git Source</a><br />
+</li>
+<li>Adicionalmente ahora probaremos el uso del operador '&amp;' el cual nos permite copiar parte del codigo que se utiliza en cierta sección.<a href="https://github.com/emoron/ProgrammingEveryone/commit/83c974afe3222791992c25df00b081a34db58a0f">Git Source</a></li>
+</ol>
+<h2 id="variables-mixins">Variables, Mixins</h2>
+<ul>
+<li>Las variables con contenedores de valores</li>
+<li><p>Todas las variables inician con el signo de $.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">$primary-color
+$secundary-color</code></pre></div>
+<p>Los mixins permiten reutilizar características de algún elemento que deseemos reutilizar en nuestro proyecto.</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css"><span class="fl">.box</span> <span class="kw">{</span>
+  <span class="kw">border-radius:</span> <span class="dt">4px</span><span class="kw">;</span>
+  <span class="kw">border-top-right-radius:</span> <span class="dt">8px</span><span class="kw">;</span>
+  <span class="kw">border-top-left-radius:</span> <span class="dt">8px</span><span class="kw">;</span> <span class="kw">}</span>
+<span class="fl">.button</span> <span class="kw">{</span>
+  <span class="kw">border-radius:</span> <span class="dt">4px</span><span class="kw">;</span>
+  <span class="kw">border-top-right-radius:</span> <span class="dt">8px</span><span class="kw">;</span>
+  <span class="kw">border-top-left-radius:</span> <span class="dt">8px</span><span class="kw">;</span>
+  <span class="kw">backgroud:</span> <span class="dt">#345</span><span class="kw">;</span> <span class="kw">}</span></code></pre></div>
+<p>aplicando mixins tenemos:</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">@mixin roundy<span class="kw">{</span>
+    <span class="kw">border-radius:</span> <span class="dt">4px</span><span class="kw">;</span>
+    <span class="kw">border-top-right-radius:</span><span class="dt">8px</span><span class="kw">;</span>
+    <span class="kw">border-top-left-radius:</span> <span class="dt">8px</span><span class="kw">;</span>
+<span class="kw">}</span>
+<span class="fl">.box</span> <span class="kw">{</span>
+    <span class="er">@include</span> <span class="er">roundy;</span>
+<span class="kw">}</span>
+
+<span class="fl">.button</span><span class="kw">{</span>
+    <span class="er">@include</span> <span class="er">roundy;</span>
+    <span class="kw">backgroud:</span> <span class="dt">#345</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<p>Los Mixins tienen la característa que pueden recibir argumentos que son pasados al contenido del mismo.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">@mixin roundy($radius-one,$radius-two)<span class="kw">{</span>
+    <span class="kw">border-radius:</span> $radius-one<span class="kw">;</span>
+    <span class="kw">border-top-right-radius:</span>$radius-two<span class="kw">;</span>
+    <span class="kw">border-top-left-radius:</span> $radius-two<span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+<p>Paletas de Colores</p>
+<p>Sass puede generar paletas de colores, o basados en los colores complementarios, normalmente son seleccionades de la paleta de colores pero nos ayuda seleccionar automaticamente.</p>
+<pre><code>$background: #cd3cc1;
+$text-color: #3ccd48;
+
+body{
+  background: $backgroud;
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+a{
+  color: $text-color;
+}</code></pre>
+<p>Ahora agregamos definiciones para aclarar o obscurecer el texto.</p>
+<pre><code>$background: #cd3cc1;
+$text-color: #3ccd48;
+
+body{
+  background: $backgroud;
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+a{
+  color: lighten($text-color, 20%);
+}</code></pre>
+<pre><code>$background: #cd3cc1;
+$text-color: #3ccd48;
+$darken-Title: darken($text-color);
+body{
+  background: $backgroud;
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+a{
+  color: $darken-Title;
+}</code></pre>
+<p>Para seleccionar los colores complementarios.</p>
+<pre><code>$background: #cd3cc1;
+$text-color: complement(#3ccd48);
+$darken-Title: darken($text-color);
+body{
+  background: $backgroud;
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+a{
+  color: $darken-Title;
+}</code></pre>
+<p><img src="img/Color-Complementary-2.png" alt="Drawing" style="width: 100px;"/> <img src="img/Color-Complementary.png" alt="Drawing" style="width: 100px;"/> Incluso podemos mezclar colores, para lograr efectos interesantes.</p>
+<pre><code>$background: desaturate(#cd3cc1);
+$text-color: mix(#369,#187;
+$darken-Title: darken($text-color);
+body{
+  background: $backgroud;
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+a{
+  color: $darken-Title;
+}</code></pre>
+<h2 id="importación-de-partes-de-css">Importación de Partes de CSS</h2>
+<p>En proyectos con gran cantidad de código es conveniente separar los componentes de la hoja de estilo, para su optimización. Sin embargo al momento de cargar el CSS en el navegador de los clientes, es conveniente mantener en un sólo archivo todas las declaraciones.</p>
+<p>Ahora creamos un archivo <code>_variables.scss</code>y colocaremos las declaraciones de colores. Debe llevar un <code>underscore</code> para que sass no genere el archivo <code>css</code> correspondiente.</p>
+<pre><code>$background: desaturate(#cd3cc1);
+$text-color: mix(#369,#187;
+$darken-Title: darken($text-color);
+</code></pre>
+<p>Dentro del archivo de <code>styles.scss</code> colocaremos:</p>
+<pre class="compass"><code>@import &quot;_variables.scss&quot;;
+
+body{
+  background: $backgroud;
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+a{
+  color: $darken-Title;
+}</code></pre>
+<p>Como buena práctica se recomienda crear archivos separados según el contexto del documento de ésta manera el <code>main.scss</code> únicamente contiene la llamada a los archivos scss.</p>
+<pre class="compass"><code>@import &quot;_variables.scss&quot;;
+@import &quot;_global.scss&quot;;
+@import &quot;pages/_about_us.scss&quot;;
+</code></pre>
+<blockquote>
+<p>Recordar que el orden en el que aparecen, es sumamente importante. Ya que la declaración de variables no declaradas, causará error de compilación.</p>
+</blockquote>
+<h2 id="funciones-sass"><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#function_directives">Funciones SaSS</a></h2>
+<p>Es posible definir funciones propias para realizar algunos calculos en nuestro diseño.</p>
+<pre class="compass"><code>$grid-width: 40px;
+$gutter-width: 10px;
+
+@function grid-width($n) {
+  @return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+
+#sidebar { width: grid-width(5); }</code></pre>
+<h2 id="media-queries">Media Queries</h2>
+<p>En ocaciones deseamos adaptar nuestro diseño para que responda al tamaño de la pantalla. El siguiente ejemplo se declaran clases para adaptarse <a href="../src/mediaqueries.scss">ver ejemplo</a>.</p>
+<pre class="compass"><code>body{
+  font-family: Helvetica;
+}
+.content{
+  .sidebar{
+    background: #999;
+    color: white;
+    padding: 5px;
+    float: left;
+    width: 100px;
+    a{
+      display: block;
+      color:white;
+    }
+  }
+  .main{
+    padding: 5px;
+    background: #bbb;
+    display: @inline-block;
+    width: 60%;
+  }
+}
+
+@media (max-width:480px) {
+  .content{
+    .sidebar{
+      width: 95%;
+      a{
+        display: inline;
+      }
+    }
+    .main{
+      width: 95%;
+    }
+}</code></pre>
+<p>Para evitar repetir código Sass nos permite incluir las media Queries dentro de declaraciones anidadas.</p>
+<pre class="compass"><code>body{
+  font-family: Helvetica;
+}
+.content{
+  .sidebar{
+    background: #999;
+    color: white;
+    padding: 5px;
+    float: left;
+    width: 100px;
+    a{
+      display: block;
+      color:white;
+    }
+    @media (max-width:480px) {
+      width: 95%;
+      a{
+        display: inline;
+      }
+    }
+  }
+  .main{
+    padding: 5px;
+    background: #bbb;
+    display: @inline-block;
+    width: 60%;
+  @media (max-width:480px) {
+      width: 95%;
+  }
+}
+}
+</code></pre>
+<h2 id="funciones-iterativas">Funciones Iterativas</h2>
+<pre class="compass"><code>.red{
+  color:red;
+}
+.green{
+  color: green;
+}
+.blue{
+  color:blue;
+}</code></pre>
+<p>Sass posee el operador <code>#{variable}</code> que puede ser utilizado para iterar sobre la variable.</p>
+<p>Tal que podemos declarar un mixin de la siguiente forma:</p>
+<pre class="compass"><code>@mixin color_class($color){
+  .#{$color}{
+    color:$color;
+    background-image: url(&quot;images/#{color}.jpg&quot;);
+  }
+}</code></pre>
+<p>Podemos incluir sentencias __<span class="citation">@if__</span> para crear efectos en las sentencias.</p>
+<pre class="compass"><code>
+@mixin color_class($color){
+  .#{$color}{
+    color:$color;
+    background-image: url(&quot;images/#{color}.jpg&quot;);
+  @if $color == red {
+    border: 1px solid black;
+  }
+  }
+}</code></pre>
+<p>Adicionalmente se tienen las sentencias <strong><span class="citation">@else__</span> , </strong><span class="citation">@else</span> if __ para controlar el flujo del sass.</p>
+<pre class="compass"><code>@mixin box($width){
+  @if $width &gt; 100px;
+    padding: 0px;
+  } @else if $width == 100 px{
+    padding: 5px;
+  }</code></pre>
+<p>Sass posee tambien loops <strong><span class="citation">@for__</span> y </strong><span class="citation">@each__</span></p>
+<pre><code>@for $i from 1 through 100 {
+  .box:nth-child(#{$i}){
+    background:darken(white,$i);
+  }
+}
+</code></pre>
+<pre><code>@each $member in tom,jhonny,colin, phil {
+  .bandmember.#{$member}{
+    backgroud:url(&quot;images/#{member}.jpg&quot;)
+  }
+}</code></pre>
+<h2 id="mixins-avanzados">Mixins avanzados</h2>
+<p>Es posible que un mixin reciba una cantidad dinamica de argumentos usando una variable dinamica <a href="../src/mixins.scss">Ejemplo</a>.</p>
+<pre class="compass"><code>@mixin band($name,$members...){
+  @each $member in $members{
+    .#{$name}.bandmember.#{$member}{
+      backgroud:url(&quot;images/#{member}.jpg&quot;)
+  }
+}
+</code></pre>
+</body>
+</html>
